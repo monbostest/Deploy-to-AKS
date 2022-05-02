@@ -7,6 +7,8 @@ pool:
 steps:
 - script: sudo apt-get update
 - script: sudo apt-get install docker.io  -y
+- script: sudo usermod -a -G docker $USER
+- script: systemctl restart docker
 - task: Docker@2
   inputs:
     containerRegistry: 'docker'
