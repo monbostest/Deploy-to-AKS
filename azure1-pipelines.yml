@@ -9,6 +9,7 @@ steps:
 - script: sudo apt-get install docker.io  -y
 - script: sudo usermod -a -G docker $USER
 - script: sudo systemctl restart docker
+- script: echo $USER
 - task: Docker@2
   inputs:
     containerRegistry: 'docker'
