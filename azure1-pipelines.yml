@@ -3,7 +3,7 @@ trigger:
 
 pool:
   name: newsA
-
+  vmImage: ubuntu-latest
 
 - task: Docker@2
   inputs:
